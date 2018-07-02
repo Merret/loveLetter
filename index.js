@@ -105,9 +105,9 @@ function usingCard(n, now) {
 
 function draw(x) {
 	if(x==1) {
-		document.getElementById("card1").src = "./card/"+toString(user)+".jpg";
+		document.getElementById("card1").src = "./card/"+user.toString()+".jpg";
 	} else if(x==2) {
-		document.getElementById("card2").src = "./card/"+toString(user)+".jpg";
+		document.getElementById("card2").src = "./card/"+user.toString()+".jpg";
 	}
 }
 
