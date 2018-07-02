@@ -47,7 +47,7 @@ function usingCard(n, now) {
         return;
       }
     } else {
-      if (guess == use) {
+      if (guess == user) {
         finish = true;
         winner = 1;
         return;
