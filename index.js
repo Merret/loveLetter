@@ -17,7 +17,7 @@ var now = Math.floor(Math.random()*2);
 var i;
 var nowCard;
 var protect = 0;
-for (i = 2; i <= 14 && finsih == false; i++) {
+for (i = 2; i <= 14 && finish == false; i++) {
 	while (card[ran] == 0) {
 		ran = Math.floor(Math.random()*16);
 	}
