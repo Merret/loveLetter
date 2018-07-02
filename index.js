@@ -5,7 +5,7 @@ var winner = 2; //either player0 or player1 will be the winner
 var card = [1,1,1,1,1,2,2,3,3,4,4,5,5,6,7,8]; // 16 cards in a game
 var ran = Math.floor(Math.random()*16);
 var user = card[ran];
-document.getElementById("card1").src = "./card/"+user+".jpg"; // show the card
+draw(1); // show the card
 card[ran] = 0;
 while (card[ran] == 0) {
   ran = Math.floor(Math.random()*16);
@@ -103,4 +103,11 @@ function usingCard(n, now) {
   }
 }
 
+function draw(x) {
+  if(x==1) {
+    document.getElementById("card1").src = "./card/"+user+".jpg";
+  } else if(x==2) {
+    document.getElementById("card2").src = "./card/"+user+".jpg";
+  }
+}
 
