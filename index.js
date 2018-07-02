@@ -25,12 +25,12 @@ for (i = 2; i <= 14 && finsih == false; i++) {
 	card[ran] = 0;
 	now = (now+1)%2; //next player
 	if (now == 0) {
-		if () {
+		if (false) {
 			nowCard = user;
 		}
 		usingCard(nowCard, 0);
 	} else {
-		if () {
+		if (false) {
 			nowCard = opponent;
 		}
 		usingCard(nowCard, 0);
@@ -38,7 +38,7 @@ for (i = 2; i <= 14 && finsih == false; i++) {
 }
 function usingCard(n, now) {
 	if (n == 1 && protect == 0) {
-		var guess = ;
+		var guess = 9;
 		if (now == 0) {
 			if (guess == opponent) {
 				finish = true;
