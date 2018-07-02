@@ -2,10 +2,10 @@ document.title = "Love Letter";
 var finish = false; //finsihGame
 var winner = 2; //either player0 or player1 will be the winner
 //initialize
-var card = [1,1,1,1,1,2,2,3,3,4,4,5,5,6,7,8];
+var card = [1,1,1,1,1,2,2,3,3,4,4,5,5,6,7,8]; // 16 cards in a game
 var ran = Math.floor(Math.random()*16);
 var user = card[ran];
-document.getElementById("card1").src = "./card/"+user+".jpg";
+document.getElementById("card1").src = "./card/"+user+".jpg"; // show the card
 card[ran] = 0;
 while (card[ran] == 0) {
   ran = Math.floor(Math.random()*16);
