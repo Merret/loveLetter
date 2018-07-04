@@ -5,6 +5,7 @@ var winner = 2; //either player0 or player1 will be the winner
 var card = [1,1,1,1,1,2,2,3,3,4,4,5,5,6,7,8]; // 16 cards in a game
 var ran = Math.floor(Math.random()*16);
 var user = card[ran];
+card.splice(ran,1);
 draw(1); // show the card
 card[ran] = 0;
 while (card[ran] == 0) {
