@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
-	<meta charset="utf-8">
-	<title>Love Letter 💌 情書</title>
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<style>
+<head>
+<meta charset="utf-8">
+<title>Love Letter 💌 情書</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
 .b {
 	cursor: pointer;
 }
 </style>
-	</head>
-	<body bgcolor="#F5ECCE">
+</head>
+<body bgcolor="#F5ECCE">
 <h1 class="w3-center" style="color: #FF0080"> Love Letter 💌 情書 </h1>
 <div id="info">
-      <h1 id="showinfo"></h1>
-    </div>
+  <h1 id="showinfo"></h1>
+</div>
 <div id="cardzone" style="width: 100%">
-      <div id="hand" class="w3-half w3-padding b" bgcolor="light-gray" height="100%" onclick="drophand()">
+  <div id="hand" class="w3-half w3-padding b" bgcolor="light-gray" height="100%" onclick="drophand()">
     <h1 id="handdisplay"></h1>
   </div>
-      <div id="newc" class="w3-half w3-padding b" bgcolor="light-gray" height="100%" onclick="dropnewc()">
+  <div id="newc" class="w3-half w3-padding b" bgcolor="light-gray" height="100%" onclick="dropnewc()">
     <h1 id="newcdisplay"></h1>
   </div>
-    </div>
+</div>
 <div id="cards">
-      <h3>上個棄牌：<span id="drop">無</span></h3>
-    </div>
+  <h3>上個棄牌：<span id="drop">無</span></h3>
+</div>
 <div id="selectplayer" style="position: fixed; z-index: 2; left: 40%; top: 20%; opacity: 0.85; width: 300px; height: 200px" class="w3-card w3-round-large w3-white w3-center" hidden>
-      <h3>選擇玩家</h3>
-      <h3 id="p1" onClick="sp = 1; this.parentElement.hidden=true;" class="b"></h3>
-      <h3 id="p2" onClick="sp = 2; this.parentElement.hidden=true;" class="b"></h3>
-      <h3 id="p3" onClick="sp = 3; this.parentElement.hidden=true;" class="b"></h3>
-      <h3 id="p4" onClick="sp = 4; this.parentElement.hidden=true;" class="b"></h3>
-    </div>
+  <h3>選擇玩家</h3>
+  <h3 id="p1" onClick="sp = 1; this.parentElement.hidden=true;card(c,2);" class="b"></h3>
+  <h3 id="p2" onClick="sp = 2; this.parentElement.hidden=true;card(c,2);" class="b"></h3>
+  <h3 id="p3" onClick="sp = 3; this.parentElement.hidden=true;card(c,2);" class="b"></h3>
+  <h3 id="p4" onClick="sp = 4; this.parentElement.hidden=true;card(c,2);" class="b"></h3>
+</div>
 <div id="selectcard" style="position: fixed; z-index: 1; left: 40%; top: 20%; opacity: 0.85; width: 300px; height: 200px" class="w3-card w3-round-large w3-white w3-center" hidden>
-      <h3>選擇卡牌</h3>
-      <h3> <span onClick="sc2()" class="b">神父</span> <span onClick="sc3()" class="b">男爵</span> <span onClick="sc4()" class="b">侍女</span> <span onClick="sc5()" class="b">王子</span> <br>
-    <span onClick="sc6()" class="b">國王</span> <span onClick="sc7()" class="b">伯爵夫人</span> <span onClick="sc8()" class="b">公主</span> </h3>
-    </div>
-		<div id="over" style="position: fixed; z-index: 1; left: 40%; top: 20%; opacity: 0.85; width: 300px; height: 200px" class="w3-card w3-round-large w3-white w3-center" hidden>
-      <h3 id="gresult"></h3>
-    </div>
-		<script src="index.test.js"></script>
+  <h3>選擇卡牌</h3>
+  <h3> <span onClick="sc=2; this.parentElement.hidden=true;card(c,3);" class="b">神父</span> <span onClick="sc=3; this.parentElement.hidden=true;card(c,3);" class="b">男爵</span> <span onClick="sc=4; this.parentElement.hidden=true;card(c,3);" class="b">侍女</span> <span onClick="sc=5; this.parentElement.hidden=true;card(c,3);" class="b">王子</span> <br>
+    <span onClick="sc=6; this.parentElement.hidden=true;card(c,3);" class="b">國王</span> <span onClick="sc=7; this.parentElement.hidden=true;card(c,3);" class="b">伯爵夫人</span> <span onClick="sc=8; this.parentElement.hidden=true;card(c,3);" class="b">公主</span> </h3>
+</div>
+<div id="over" style="position: fixed; z-index: 1; left: 40%; top: 20%; opacity: 0.85; width: 300px; height: 200px" class="w3-card w3-round-large w3-white w3-center" hidden>
+  <h3 id="gresult"></h3>
+</div>
+<script src="index.test.js"></script>
 </body>
 </html>
