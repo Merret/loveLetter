@@ -2,6 +2,9 @@ document.getElementById("p1").innerHTML = "Computer";
 var card = [0, 1, 1, 1, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 7, 8],
 	hand = 0,
 	newc = 0,
+	ophd = 0,
+	opnc = 0,
+	protect = 0,
 	leftcard = 16,
 	handdisplay = "no card",
 	newcdisplay = "no card";
@@ -11,17 +14,30 @@ changecard();
 leftcard--;
 card.splice(x, 1);
 getnewc();
+x = Math.floor((Math.random() * leftcard) + 1);
+ophd = card[x];
+leftcard--;
+card.splice(x, 1);
+
 
 function start() {
-	card = [0, 1, 1, 1, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 7, 8];
-	hand = 0;
-	newc = 0;
-	leftcard = 16;
-	handdisplay = "no card";
-	newcdisplay = "no card";
-	x = Math.floor((Math.random() * leftcard) + 1);
+	var card = [0, 1, 1, 1, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 7, 8],
+		hand = 0,
+		newc = 0,
+		ophd = 0,
+		opnc = 0,
+		protect = 0,
+		leftcard = 16,
+		handdisplay = "no card",
+		newcdisplay = "no card";
+	var x = Math.floor((Math.random() * leftcard) + 1);
 	hand = card[x];
 	changecard();
+	leftcard--;
+	card.splice(x, 1);
+	getnewc();
+	x = Math.floor((Math.random() * leftcard) + 1);
+	ophd = card[x];
 	leftcard--;
 	card.splice(x, 1);
 }
@@ -245,73 +261,74 @@ function getnewc() {
 function card(step) {
 	if (step == 1) {
 		switch (c) {
-			case: 1
-
+			case 1:
+				document.getElementById("selectplayer").hidden = false;
 				break;
-			case: 2
-
+			case 2:
+				document.getElementById("selectplayer").hidden = false;
 				break;
-			case: 3
-
+			case 3:
+				document.getElementById("selectplayer").hidden = false;
 				break;
-			case: 4
-
+			case 4:
+				protect = 1;
 				break;
-			case: 5
-
+			case 5:
+				document.getElementById("selectplayer").hidden = false;
 				break;
-			case: 6
-
+			case 6:
+				document.getElementById("selectplayer").hidden = false;
 				break;
-			case: 8
-
+			case 8:
+				document.getElementById("gresult").innerHTML = "你輸了！";
+				document.getElementById("over").hidden = false;
 				break;
 		}
 	} else if (step == 2) {
 		switch (c) {
-			case: 1
+			case 1:
+				document.getElementById("selectcard").hidden = false;
+				break;
+			case 2:
 
 				break;
-			case: 2
+			case 3:
 
 				break;
-			case: 3
+			case 4:
 
 				break;
-			case: 4
+			case 5:
 
 				break;
-			case: 5
+			case 6:
 
 				break;
-			case: 6
-
-				break;
-			case: 8
+			case 8:
 
 				break;
 		}
 	} else {
 		switch (c) {
-			case: 1
+			case 1:
 
 				break;
-			case: 2
+			case 2:
 
 				break;
-			case: 3
+			case 3:
 
 				break;
-			case: 4
+			case 4:
 
 				break;
-			case: 5
+			case 5:
 
 				break;
-			case: 6
+			case 6:
 
 				break;
-			case: 8
+			case 8:
 
 				break;
 		}
